@@ -1,103 +1,158 @@
-# Multimodal Retrieval-Augmented Generation (RAG)
+# 🤖 MultiChat: Advanced PDF & Image Chat System
 
-This repository contains an implementation of a Multimodal RAG model capable of retrieving and generating responses based on both textual and visual inputs. The model processes text and image data to provide contextually rich answers. This README will guide you through the structure, installation, and usage of the project.
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/techyogeshchauhan/multichat/issues)
 
-## Features
-- **Multimodal Input**: Supports both text and image input.
-- **Contextual Retrieval**: Fetches relevant information from a knowledge base.
-- **Generative Responses**: Produces coherent and contextually appropriate answers.
-- **PDF Output**: Generates a PDF file containing the input text, associated images, and model responses.
+An innovative chat system that combines the power of PDF document interaction and image understanding. Chat naturally with your documents while leveraging visual context for richer, more meaningful conversations.
 
-## Screenshots
-1. **Input Text and Image**:
-   ![Screenshot1](path/to/screenshot1.png)
+## ✨ Features
 
-2. **Knowledge Retrieval**:
-   ![Screenshot2](path/to/screenshot2.png)
+- 📑 **PDF Chat**
+  - Upload and chat with multiple PDF documents
+  - Smart context understanding and retrieval
+  - Document summarization
+  - Citation and source tracking
 
-3. **Generated PDF**:
-   ![Screenshot3](path/to/screenshot3.png)
+- 🖼️ **Image Processing**
+  - Visual question answering
+  - Image-based context enhancement
+  - Multi-image support
+  - OCR integration for text in images
 
-## Installation
+- 🤝 **Multimodal Integration**
+  - Seamless switching between document and image context
+  - Combined understanding of text and visual elements
+  - Context-aware responses
+  - Rich, multimodal outputs
+
+## 🚀 Getting Started
 
 ### Prerequisites
+
 - Python 3.8 or higher
-- Pip package manager
-- Virtual environment (optional but recommended)
+- Basic understanding of virtual environments
+- GPU recommended for better performance
 
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/multimodal-rag.git
-   cd multimodal-rag
-   ```
+### Installation
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv env
-   source env/bin/activate   # On Windows: env\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Usage
-1. Add your knowledge base and images to the appropriate folders.
-2. Run the main script:
-   ```bash
-   python main.py --input_text "Your text here" --input_image path/to/image.jpg
-   ```
-3. The output will include a PDF file combining the input and response.
-
-## Project Structure
-```
-multimodal-rag/
-|-- data/
-|   |-- knowledge_base/
-|   |-- images/
-|-- outputs/
-|   |-- pdfs/
-|-- src/
-|   |-- models/
-|   |-- utils/
-|-- requirements.txt
-|-- README.md
+1. **Clone the Repository**
+```bash
+git clone https://github.com/techyogeshchauhan/multichat.git
+cd multichat
 ```
 
-## Requirements
-The required Python packages are listed below. Ensure they are installed in your environment:
-- PyPDF2
-- Pillow
-- Transformers
-- Sentence-Transformers
-- Torch
-- Scikit-learn
-- PyMuPDF
-- Pyngrok
-- Tqdm
-
-Alternatively, use the provided `requirements.txt` file to install all dependencies:
-```text
-PyPDF2
-Pillow
-Transformers
-Sentence-Transformers
-Torch
-Scikit-learn
-PyMuPDF
-Pyngrok
-Tqdm
+2. **Set Up Environment**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-## Contributions
-Contributions are welcome! Feel free to fork the repository and submit a pull request.
+3. **Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## 💻 Usage
+
+### Starting the Chat Interface
+
+```bash
+python app.py
+```
+
+Visit `http://localhost:8000` in your browser to access the chat interface.
+
+### Basic Commands
+
+```python
+# Upload a PDF
+/upload pdf_file.pdf
+
+# Process an image
+/image your_image.jpg
+
+# Get document summary
+/summary
+
+# Clear context
+/clear
+```
+
+## 🛠️ Architecture
+
+```
+multichat/
+├── app/
+│   ├── core/
+│   │   ├── pdf_processor.py
+│   │   ├── image_processor.py
+│   │   └── chat_engine.py
+│   ├── models/
+│   │   └── model_config.py
+│   └── utils/
+│       └── helpers.py
+├── static/
+│   └── styles/
+├── templates/
+│   └── chat.html
+└── app.py
+```
+
+## 📦 Key Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| PyPDF2 | PDF processing |
+| Transformers | Language models |
+| Pillow | Image processing |
+| FastAPI | Web framework |
+| Langchain | LLM integration |
+| OpenAI | Language model API |
+
+## 🎯 Use Cases
+
+- **Academic Research**: Navigate through research papers and related images
+- **Document Analysis**: Extract and discuss information from complex documents
+- **Content Creation**: Generate content based on document and image inputs
+- **Educational Support**: Interactive learning with visual and textual materials
+
+## 🛣️ Roadmap
+
+- [ ] Add support for more document formats
+- [ ] Implement real-time collaboration
+- [ ] Enhance visualization capabilities
+- [ ] Add plugin system for extensibility
+- [ ] Improve memory management for large documents
+
+## 🤝 Contributing
+
+Contributions are always welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 📫 Contact
+
+Yogesh Chauhan
+- GitHub: [@techyogeshchauhan](https://github.com/techyogeshchauhan)
+- LinkedIn: [https://www.linkedin.com/in/yogesh-chauhan-40650523b/]
+- Email: [yogesh.chauhan.ai@gmail.com]
+
+Project Link: [https://github.com/techyogeshchauhan/multichat](https://github.com/techyogeshchauhan/multichat)
 
 ---
 
-For more details, please refer to the code and additional documentation in the repository. If you encounter any issues, create a new issue in the GitHub repository or contact the maintainers.
+<div align="center">
 
+Made with ❤️ by [Yogesh Chauhan](https://github.com/techyogeshchauhan)
+
+If this project helps you, please consider giving it a ⭐️!
+
+</div>
